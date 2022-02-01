@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(189, 187, 187);
+}
+
+.bar {
+  height: 90px;
+  width: 10px;
+  margin: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: blue;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.control-panel {
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: bisque;
+  border: 2px solid rgb(125, 125, 125);
+  box-shadow: 0px 0 20px rgb(125, 125, 125);
+  border-radius: 10px;
+  top: 20px;
+  margin: auto;
+}
+
+.control-panel > .input-container,
+button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(125, 125, 125);
+}
+
+button {
+  padding: 5px;
+  height: 50px;
+  border: none;
+  background-color: coral;
+}
+
+button:hover {
+  background-color: chartreuse;
+}
+
+button:hover:active {
+  background-color: brown;
+}
+
+.bar-container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  height: 300px;
+  border-bottom: 2px solid black;
+  box-shadow: 0 3px 10px black;
+  background-color: aliceblue;
+  padding: 10px 30px 0 30px;
+  max-width: 80%;
+}
+
+.input-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-line {
+  border-left: 2px solid black;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
