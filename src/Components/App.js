@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './style.css';
-import Bar from './Bar';
+import React, { useState } from "react";
+import "../Assets/Styles/popup.css";
+import Bar from "./Bar";
 import {
   bubbleSort,
   mergeSort,
@@ -9,7 +9,7 @@ import {
   selectionSort,
   heapSort,
   sortingOptions,
-} from './sortingAlgorithms.js';
+} from "../Algorithms/sortingAlgorithms.js";
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -18,31 +18,29 @@ function getRandomInt(min, max) {
 }
 
 const disableElements = () => {
-  document.getElementById('newArrayBtn').disabled = true;
-  document.getElementById('bubbleSortBtn').disabled = true;
-  document.getElementById('mergeSortBtn').disabled = true;
-  document.getElementById('quickSortBtn').disabled = true;
-  document.getElementById('heapSortBtn').disabled = true;
-  document.getElementById('insertionSortBtn').disabled = true;
-  document.getElementById('selectionSortBtn').disabled = true;
-  document.getElementById('arraySizeInput').disabled = true;
+  document.getElementById("newArrayBtn").disabled = true;
+  document.getElementById("bubbleSortBtn").disabled = true;
+  document.getElementById("mergeSortBtn").disabled = true;
+  document.getElementById("quickSortBtn").disabled = true;
+  document.getElementById("heapSortBtn").disabled = true;
+  document.getElementById("insertionSortBtn").disabled = true;
+  document.getElementById("selectionSortBtn").disabled = true;
+  document.getElementById("arraySizeInput").disabled = true;
 };
 
 const enableElements = () => {
-  document.getElementById('newArrayBtn').disabled = false;
-  document.getElementById('bubbleSortBtn').disabled = false;
-  document.getElementById('mergeSortBtn').disabled = false;
-  document.getElementById('quickSortBtn').disabled = false;
-  document.getElementById('heapSortBtn').disabled = false;
-  document.getElementById('insertionSortBtn').disabled = false;
-  document.getElementById('selectionSortBtn').disabled = false;
-  document.getElementById('arraySizeInput').disabled = false;
+  document.getElementById("newArrayBtn").disabled = false;
+  document.getElementById("bubbleSortBtn").disabled = false;
+  document.getElementById("mergeSortBtn").disabled = false;
+  document.getElementById("quickSortBtn").disabled = false;
+  document.getElementById("heapSortBtn").disabled = false;
+  document.getElementById("insertionSortBtn").disabled = false;
+  document.getElementById("selectionSortBtn").disabled = false;
+  document.getElementById("arraySizeInput").disabled = false;
 };
 
 const generateNewArray = (count) => {
-  return new Array(count)
-    .fill()
-    .map((e) => ({ value: getRandomInt(30, 300), color: 'blue' }));
+  return new Array(count).fill().map((e) => ({ value: getRandomInt(30, 300), color: "blue" }));
 };
 
 export default function App() {
@@ -162,9 +160,7 @@ export default function App() {
       <div className="flex-container">
         <div className="flex-container bar-container">
           {arr.map((e, i) => {
-            return (
-              <Bar className="bar" value={e.value} color={e.color} key={i} />
-            );
+            return <Bar className="bar" value={e.value} color={e.color} key={i} />;
           })}
         </div>
       </div>

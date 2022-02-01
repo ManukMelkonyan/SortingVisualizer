@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { InfoPopup } from './InfoPopup';
-import './style.css';
+import React, { useState } from "react";
+import { InfoPopup } from "./InfoPopup";
+import "../Assets/Styles/style.css";
 
 const Bar = ({ value, color }) => {
   const [displayPopup, setDisplayPopup] = useState(false);
